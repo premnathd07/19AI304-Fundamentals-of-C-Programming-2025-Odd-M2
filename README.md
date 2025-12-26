@@ -60,51 +60,37 @@
 # Program:
 ```
 #include <stdio.h>
-
 int main() {
     float math, science, english, average;
-
-    printf("Enter Math mark: ");
     scanf("%f", &math);
-
-    printf("Enter Science mark: ");
     scanf("%f", &science);
-
-    printf("Enter English mark: ");
     scanf("%f", &english);
-
     average = (math + science + english) / 3.0f;
-
-    printf("Average = %.2f\n", average);
-
+    char grade;
     if (average >= 90.0f) {
-        printf("Grade: A\n");
-    }
+        grade = 'A';
+    } 
     else {
         if (average >= 75.0f) {
-            printf("Grade: B\n");
-        }
+            grade = 'B';
+        } 
         else {
             if (average >= 50.0f) {
-                printf("Grade: C\n");
-            }
+                grade = 'C';
+            } 
             else {
-                printf("Grade: F\n");
+                grade = 'F';
             }
         }
     }
-
+    printf("\nAverage Marks: %.2f\n", average);
+    printf("Grade: %c\n", grade);
     return 0;
 }
 ```
 # Output:
-```
-Enter Math mark: 95
-Enter Science mark: 85
-Enter English mark: 90
-Average = 90.00
-Grade: A
-```
+<img width="362" height="334" alt="image" src="https://github.com/user-attachments/assets/c99badf1-930e-4fa8-a73d-d86dcd126853" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -140,31 +126,18 @@ Thus, the program was implemented and executed successfully, and the required ou
 # Program:
 ```
 #include <stdio.h>
-
 int main() {
     int number = 15;
     int i;
-
     for (i = 1; i <= 10; i++) {
         printf("%d x %d = %d\n", number, i, number * i);
     }
-
     return 0;
 }
 ```
 # Output:
-```
-15 x 1 = 15
-15 x 2 = 30
-15 x 3 = 45
-15 x 4 = 60
-15 x 5 = 75
-15 x 6 = 90
-15 x 7 = 105
-15 x 8 = 120
-15 x 9 = 135
-15 x 10 = 150
-```
+<img width="360" height="445" alt="image" src="https://github.com/user-attachments/assets/f1f600cd-3c82-4193-8d8b-32b0f10c789f" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -211,33 +184,27 @@ Thus, the program was implemented and executed successfully, and the required ou
 # Program:
 ```
 #include <stdio.h>
-
 int main() {
     int n, i = 2, f = 0;
-
-    printf("Enter a number: ");
     scanf("%d", &n);
-
     while (i <= n - 1) {
         if (n % i == 0) {
-            f = 1;
+            f = 1; 
             break;
         }
         i++;
     }
-
-    if (f == 0)
-        printf("%d is a Prime Number\n", n);
-    else
-        printf("%d is Not a Prime Number\n", n);
-
+    if (f == 0) {
+        printf("%d is a prime number.\n", n);
+    } else {
+        printf("%d is not a prime number.\n", n);
+    }
     return 0;
 }
 ```
 # Output:
-```Enter a number: 17
-17 is a Prime Number
-```
+<img width="384" height="272" alt="image" src="https://github.com/user-attachments/assets/fca904d4-99aa-4770-9421-95fed96b02c2" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -289,46 +256,33 @@ Thus, the program was implemented and executed successfully, and the required ou
 # Program:
 ```
 #include <stdio.h>
-
 int main() {
-    int n, i, j, k;
-
-    printf("Enter n: ");
+    int i, j, n, k;
     scanf("%d", &n);
-
     for (i = 1; i <= n; i++) {
-
         for (j = i; j <= n; j++) {
             if (i == 1 || j == i)
                 printf("%d", j);
             else
                 printf(" ");
         }
-
         k = j - 2;
-
-        for (j = 1; j < i; j++) {
+        for (j = 1; j <= i - 1; j++) {
             if (i == n || j == i - 1)
                 printf("%d", k);
             else
                 printf(" ");
-            k--;
+            k--; 
         }
-
-        printf("\n");
+        printf("\n"); 
     }
-
     return 0;
 }
 ```
 # Output:
-```
-12345
-2   4
-3   3
-4   2
-54321
-```
+
+<img width="362" height="348" alt="image" src="https://github.com/user-attachments/assets/bd4d3055-5747-424f-8016-a3b9b570b186" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
